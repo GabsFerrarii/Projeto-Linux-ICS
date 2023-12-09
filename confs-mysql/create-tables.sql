@@ -24,7 +24,7 @@ CREATE TABLE scoobyburg.bebida (
 
 CREATE TABLE scoobyburg.compra (
 	id int NOT NULL,
-	"local" varchar(50) NOT NULL,
+	local varchar(50) NOT NULL,
 	forma_pagamento char(1) NOT NULL,
 	dt_hora timestamp NOT NULL,
 	CONSTRAINT compra_pk PRIMARY KEY (id)
