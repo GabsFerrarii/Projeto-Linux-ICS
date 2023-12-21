@@ -47,8 +47,8 @@
         </form>
         <?php
           include_once("config.php");
-
-          if(isset($_POST['submit'])) {
+          
+          if(isset($_POST['nome'])) {
             $hamburguer_nome=$_POST['nome'];
             $hamburguer_preco=$_POST['preco'];
             $hamburguer_descricao=$_POST['descricao'];
@@ -56,12 +56,6 @@
             $query = "INSERT INTO hamburguer (nome, preco, descricao)
             VALUES ('$hamburguer_nome', '$hamburguer_preco', '$hamburguer_descricao')";
 
-            if (!mysqli_query($dbconnect, $query)) {
-                die('An error occurred when submitting your review.');
-            } 
-            else {
-              echo "Thanks for your review.";
-            }
           }
         ?>
       </div>
