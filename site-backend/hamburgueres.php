@@ -35,27 +35,24 @@
     <section class="pb-12">
       <h2>HAMBÚRGUERES</h2>
       <div class="w-[70rem] flex flex-wrap justify-between">
-          <?php
+        <?php
+          include_once("config.php");
           // SQL query to retrieve data from the "users" table
           $sql = "SELECT nome, preco, descricao FROM hamburguer"
           $result = $connection->query($sql)
           if($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {?>
-              <div class="flex flex-col items-center">
-              <img src="imagens/hamburguer.png" class="min-w-[420px]">
-              <h3 class="font-bold text-[#17BDB9] text-5xl"><?php echo $row["nome"]; ?></h3>
-              <p class="font-[Inter] font-semibold"><?php echo $row["descricao"]; ?></p>
-              <h3 class="mt-4 font-bold"><?php echo $row["preco"]; ?></h3>
-          </div>
-            <?php}
+            while ($row = $result->fetch_assoc()) {
+              // MELHORAR ESSA PORRA GABRIEL
+              echo "Nome: " . $row["nome"] . ", Descrição: " . $row["descricao"] . ", Preço: " . $row["preco"] . "<br>";
+            }
           }
           else{
             echo "No results found";
           }
-  
+
           // $sql = "SELECT id, username, email FROM users";
           // $result = $connection->query($sql);
-  
+
           // if ($result->num_rows > 0) {
           //     while ($row = $result->fetch_assoc()) {
           //         echo "ID: " . $row["id"] . ", Username: " . $row["username"] . ", Email: " . $row["email"] . "<br>";
