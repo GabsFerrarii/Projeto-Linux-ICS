@@ -19,10 +19,10 @@
 ?>
 
 <label for="nome">Nome:</label>
-<input type="text" value="<?php echo $obj->hamburguer_nome ?>" readonly name="nome"/>
+<input type="text" value="<?php echo $obj->nome ?>" readonly name="nome"/>
 <label for="preco">Preço:</label>
-<input type="number" value="<?php echo $obj->hamburguer_preco ?>" readonly name="preco"/>
+<input type="number" value="<?php echo $obj->preco ?>" readonly name="preco"/>
 <label for="descricao">Descrição:</label>
-<input type="text" value="<?php echo $obj->hamburguer_descricao ?>" readonly name="descricao"/>
+<input type="text" value="<?php echo $obj->descricao ?>" readonly name="descricao"/>
 <a href="index.php" class="btn">Voltar</a>
-<a href="editar-hamburguer.php?id=<?php echo $obj->hamburguer_id?>" class="btn btn-warning" >Editar</a>
+<a href="editar-hamburguer.php?id=<?php echo $obj->id?>" class="btn btn-warning" >Editar</a>
