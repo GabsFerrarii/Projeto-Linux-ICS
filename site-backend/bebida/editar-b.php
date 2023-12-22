@@ -9,6 +9,7 @@ require "../../Persistencia/DAL/bebidaDAL.php";
 
 $obj = new Bebida();
 
+$obj->id = $_POST["id"];
 $obj->nome = $_POST["nome"];
 $obj->preco = $_POST["preco"];
 $obj->descricao = $_POST["descricao"];
