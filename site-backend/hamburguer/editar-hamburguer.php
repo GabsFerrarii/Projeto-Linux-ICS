@@ -1,3 +1,23 @@
+<?php
+   if(!isset($_GET["id"]))
+    {
+      header("location: index.php");
+    }
+    
+    require '../../Persistencia/Modelo/hamburguer.php';
+    require '../../Persistencia/DAL/hamburguerDAL.php';
+    
+    $hamburguer_id = $_GET["id"];
+    $dao = new HamburguerDAL();
+    $obj = $dao->buscarPorChavePrimaria($hamburguer_id);
+
+    if($obj == null)
+    {
+        header("location: index.php");
+    } 
+    
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -19,8 +39,8 @@
   <header class="flex justify-around items-center border-b-8 border-[#17BDB9] py-4 bg-white text-[#17BDB9]">
     <div class="w-[70rem] flex justify-between items-center">
       <h1>
-        <a href="index.html">
-          <img src="../../imagens/logo.svg">
+        <a href="../index.html">
+          <img src="../imagens/logo.svg">
         </a>
       </h1>
       <ol class="flex justify-between text-2xl font-bold">
