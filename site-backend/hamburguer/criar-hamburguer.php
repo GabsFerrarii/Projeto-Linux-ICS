@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Scooby Burg Backend - Hambúrgueres</title>
-  <link href="principal.css" rel="stylesheet" type="text/css" />
+  <link href="../principal.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,14 +20,14 @@
     <div class="w-[70rem] flex justify-between items-center">
       <h1>
         <a href="index.html">
-          <img src="imagens/logo.svg">
+          <img src="../imagens/logo.svg">
         </a>
       </h1>
       <ol class="flex justify-between text-2xl font-bold">
-        <li class="mx-5 hover:underline"><a href="index.html">Home</a></li>
-        <li class="mx-5 underline text-[#8D2F0D]"><a href="hamburgueres.html">Hambúrgueres</a></li>
-        <li class="mx-5 hover:underline"><a href="bebidas.html">Bebidas</a></li>
-        <li class="mx-5 hover:underline"><a href="sobre-nos.html">Sobre nós</a></li>
+        <li class="mx-5 hover:underline"><a href="../index.html">Home</a></li>
+        <li class="mx-5 underline text-[#8D2F0D]"><a href="#">Hambúrgueres</a></li>
+        <li class="mx-5 hover:underline"><a href="../bebida/index.php">Bebidas</a></li>
+        <li class="mx-5 hover:underline"><a href="../sobre-nos.html">Sobre nós</a></li>
       </ol>
     </div>
   </header>
@@ -45,19 +45,6 @@
             <!-- <input class="w-full p-1 rounded mb-4 outline-none text-2xl" type="text" name="descricao" /> -->
             <input class="mx-auto" type="submit" value="Criar" />
         </form>
-        <?php
-          include_once("config.php");
-          
-          if(isset($_POST['nome'])) {
-            $hamburguer_nome=$_POST['nome'];
-            $hamburguer_preco=$_POST['preco'];
-            $hamburguer_descricao=$_POST['descricao'];
-
-            $query = "INSERT INTO hamburguer (nome, preco, descricao)
-            VALUES ('$hamburguer_nome', '$hamburguer_preco', '$hamburguer_descricao')";
-
-          }
-        ?>
       </div>
     </section>
   </main>
