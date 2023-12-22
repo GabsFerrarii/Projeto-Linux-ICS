@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Scooby Burg Backend - Hambúrgueres</title>
-  <link href="principal.css" rel="stylesheet" type="text/css" />
+  <link href="../principal.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,14 +20,14 @@
     <div class="w-[70rem] flex justify-between items-center">
       <h1>
         <a href="index.html">
-          <img src="imagens/logo.svg">
+          <img src="../imagens/logo.svg">
         </a>
       </h1>
       <ol class="flex justify-between text-2xl font-bold">
-        <li class="mx-5 hover:underline"><a href="index.html">Home</a></li>
-        <li class="mx-5 underline text-[#8D2F0D]"><a href="hamburgueres.html">Hambúrgueres</a></li>
-        <li class="mx-5 hover:underline"><a href="bebidas.html">Bebidas</a></li>
-        <li class="mx-5 hover:underline"><a href="sobre-nos.html">Sobre nós</a></li>
+        <li class="mx-5 hover:underline"><a href="../index.html">Home</a></li>
+        <li class="mx-5 underline text-[#8D2F0D]"><a href="#">Hambúrgueres</a></li>
+        <li class="mx-5 hover:underline"><a href="../bebida/index.php">Bebidas</a></li>
+        <li class="mx-5 hover:underline"><a href="../sobre-nos.html">Sobre nós</a></li>
       </ol>
     </div>
   </header>
@@ -42,9 +42,8 @@
           $result = $connection->query($sql)
           if($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-              // MELHORAR ESSA PORRA GABRIEL
-              echo "Nome: " . $row["nome"] . ", Descrição: " . $row["descricao"] . ", Preço: " . $row["preco"] . "<br>";
-              echo '<div class="flex flex-col items-start"><img src="../imagens/hamburguer.png" class="min-w-[420px]"><h3 class="font-bold text-[#17BDB9] text-5xl">' . $row["nome"] . '</h3><p class="font-[Inter] font-semibold">' . $row["descricao"] . '</p><div class="mt-4 flex justify-between items-center w-full"><h3 class="font-bold">' . $row["preco"] . '</h3><ul class="flex"><a href="editar-hamburguer.php"><li class="mr-4"><img src="../imagens/edit-icon.svg" /></li></a><a href="deletar-hamburguer.php"><li><img src="../imagens/delete-icon.svg" /></li></a></ul></div></div>';
+              //echo "Nome: " . $row["nome"] . ", Descrição: " . $row["descricao"] . ", Preço: " . $row["preco"] . "<br>";
+              echo '<div class="flex flex-col items-start"><img src="../../imagens/hamburguer.png" class="min-w-[420px]"><h3 class="font-bold text-[#17BDB9] text-5xl">' . $row["nome"] . '</h3><p class="font-[Inter] font-semibold">' . $row["descricao"] . '</p><div class="mt-4 flex justify-between items-center w-full"><h3 class="font-bold">' . $row["preco"] . '</h3><ul class="flex"><a href="editar-hamburguer.php"><li class="mr-4"><img src="../../imagens/edit-icon.svg" /></li></a><a href="deletar-hamburguer.php"><li><img src="../../imagens/delete-icon.svg" /></li></a></ul></div></div>';
             }
           }
           else{
@@ -64,14 +63,14 @@
         ?>
         <!-- div hamburguer -->
         <div class="flex flex-col items-start">
-            <img src="../imagens/hamburguer.png" class="min-w-[420px]">
+            <img src="../../imagens/hamburguer.png" class="min-w-[420px]">
             <h3 class="font-bold text-[#17BDB9] text-5xl">Hamburguer Burger</h3>
             <p class="font-[Inter] font-semibold">Pão brioche, tomate e tristeza crônica</p>
             <div class="mt-4 flex justify-between items-center w-full">
                <h3 class="font-bold">R$ 49,99</h3>
                <ul class="flex">
-                 <a hreg="editar-hamburguer.php"><li class="mr-4"><img src="../imagens/edit-icon.svg" /></li></a>
-                 <a href="deletar-hamburguer.php"><li><img src="../imagens/delete-icon.svg" /></li></a>
+                 <a hreg="editar-hamburguer.php"><li class="mr-4"><img src="../../imagens/edit-icon.svg" /></li></a>
+                 <a href="deletar-hamburguer.php"><li><img src="../../imagens/delete-icon.svg" /></li></a>
                </ul>
             </div>
         </div>
