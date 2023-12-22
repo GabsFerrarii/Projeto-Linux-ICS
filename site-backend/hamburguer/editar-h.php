@@ -4,7 +4,7 @@ if(!isset($_POST["nome"]) || !isset($_POST["preco"]) || !isset($_POST["descricao
     header("location:index.php");
 }
 
-require "../../Persistencia/modelo/hamburguer.php";
+require "../../Persistencia/Modelo/hamburguer.php";
 require "../../Persistencia/DAL/hamburguerDAL.php";
 
 $obj = new Hamburguer();
@@ -27,5 +27,6 @@ else{
 
 <div>
     <h1>Alterar Hamburguer</h1>
+    <h2><?php echo $msg; ?></h2>
     <a href="index.php">Voltar</a>
 </div>
