@@ -51,9 +51,9 @@
                 <h3 class="font-bold text-[#17BDB9] text-5xl"><?php echo $obj->nome ?></h3>
                 <p class="font-[Inter] font-semibold"><?php echo $obj->descricao ?></p>
                 <div class="mt-4 flex justify-between items-center w-full">
-                <h3 class="font-bold"><?php echo $obj->preco ?></h3>
+                <a href="detalhes-bebida.php?id=<?php echo $obj->id?>"><h3 class="font-bold"><?php echo $obj->preco ?></h3></a>
                 <ul class="flex">
-                    <a hreg="editar-bebida.php?id=<?php echo $obj->id?>"><li class="mr-4"><img src="../imagens/edit-icon.svg" /></li></a>
+                    <a href="editar-bebida.php?id=<?php echo $obj->id?>"><li class="mr-4"><img src="../imagens/edit-icon.svg" /></li></a>
                     <a href="deletar-b.php?id=<?php echo $obj->id?>"><li><img src="../imagens/delete-icon.svg" /></li></a>
                 </ul>
                 </div>
