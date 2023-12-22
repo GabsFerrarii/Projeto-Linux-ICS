@@ -1,5 +1,5 @@
 <?php
-require_once '\var\www\html\Persistencia\db.php';
+require_once '/var/www/html/Persistencia/db.php';
 
 class hamburguerDAL {
     private $pdo;
@@ -76,11 +76,6 @@ class hamburguerDAL {
     {
         $parametros = array();
         $sql = "SELECT * FROM hamburguer ";
-        //if(isset($filtro))
-        //{
-        //    $sql .= " WHERE nome ilike :filtro OR id ilike :filtro";
-        //    $parametros[":filtro"] = "%".$filtro."%";
-        //}
         $lista = array();
         $query = $this->pdo->prepare($sql);
         
