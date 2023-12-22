@@ -1,5 +1,5 @@
 <?php
-    include '../../Persistencia/DAL/bebidaDAL.php';
+    include '../Persistencia/DAL/bebidaDAL.php';
 
     $dao = new BebidaDAL();
     $lista = $dao->listar(); 
@@ -13,7 +13,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Scooby Burg - Bebidas</title>
-  <link href="../principal.css" rel="stylesheet" type="text/css" />
+  <link href="principal.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,7 +48,7 @@
             ?>
             <div class="flex flex-col items-center">
                 <img src="../imagens/bebida.png" class="min-w-[420px]">
-                <h3 class="font-bold text-[#17BDB9] text-5xl"><?php echo $obj->nome ?></h3>
+                <a href="../scoobyburg.backend.biz/bebida/detalhes-bebida.php?id=<?php echo $obj->id?>"><h3 class="font-bold text-[#17BDB9] text-5xl"><?php echo $obj->nome ?></h3></a>
                 <p class="font-[Inter] font-semibold"><?php echo $obj->descricao ?></p>
                 <h3 class="font-bold"><?php echo $obj->preco ?></h3>
             </div>
