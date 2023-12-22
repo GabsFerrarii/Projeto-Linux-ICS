@@ -75,7 +75,7 @@ class bebidaDAL {
     public function listar($filtro=null,$ordenarPor=null)
     {
         $parametros = array();
-        $sql = "SELECT * FROM hamburguer ";
+        $sql = "SELECT * FROM bebida ";
         $lista = array();
         $query = $this->pdo->prepare($sql);
         
