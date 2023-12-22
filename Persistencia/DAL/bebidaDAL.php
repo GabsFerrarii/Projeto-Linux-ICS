@@ -41,7 +41,7 @@ class bebidaDAL {
     public function alterar($obj)
     {
         $parametros = array(
-            ':id' => $obj -> produto_id,
+            ':id' => $obj -> id,
             ':nome' => $obj -> nome,
             ':descricao' => $obj -> descricao,
             ':preco' => $obj -> preco,
