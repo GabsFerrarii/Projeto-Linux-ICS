@@ -1,6 +1,6 @@
 <?php
 
-class Produto {
+class Hamburguer {
     
     private $id;
     private $nome;
