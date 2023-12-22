@@ -12,7 +12,7 @@ Bem-vindo ao Scooby Burg, a inovadora hamburgueria online com um sistema desenvo
   - [Back-End](https://github.com/GabsFerrarii/Projeto-Linux-ICS/tree/main/site-backend)
   - [Front-End](https://github.com/GabsFerrarii/Projeto-Linux-ICS/tree/main/site-frontend)
 - Apresentações
-  - [Slides]()
+  - [Slides](https://docs.google.com/presentation/d/1038_KBpxWemKlV04tEeh-iNTxg38-RX-WHTRJlCrf_E/edit?usp=sharing)
   - [Gravações da aplicação](https://github.com/GabsFerrarii/Projeto-Linux-ICS/tree/main/apresenta%C3%A7%C3%B5es)
 
 ## Equipe do Projeto 📚
