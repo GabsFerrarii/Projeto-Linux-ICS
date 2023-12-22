@@ -35,7 +35,7 @@
     <section class="pb-12">
       <h2 class="font-[Knewave] text-black text-4xl my-12">CRIAR BEBIDA</h2>
       <div class="m-0-auto bg-[#17BDB9]">
-        <form action="criar-h.php" method="post" class="flex flex-col items-start p-8 m-auto h-auto"> 
+        <form action="criar-b.php" method="post" class="flex flex-col items-start p-8 m-auto h-auto"> 
             <label class="font-semibold text-2xl" for="nome">Nome</label>
             <input class="w-full p-1 rounded mb-4 outline-none text-2xl" type="text" name="nome" />
             <label class="font-semibold text-2xl" for="preco">Preço</label>
