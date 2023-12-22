@@ -1,3 +1,11 @@
+<?php
+    include '../../Persistencia/DAL/hamburguerDAL.php';
+
+    $dao = new HamburguerDAL();
+    $lista = $dao->listar(); 
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -19,7 +27,7 @@
   <header class="flex justify-around items-center border-b-8 border-[#17BDB9] py-4 bg-white text-[#17BDB9]">
     <div class="w-[70rem] flex justify-between items-center">
       <h1>
-        <a href="index.html">
+      <a href="../index.html">
           <img src="../imagens/logo.svg">
         </a>
       </h1>
@@ -36,47 +44,26 @@
       <h2>HAMBÚRGUERES</h2>
       <div class="w-[70rem] flex flex-wrap justify-between">
         <?php
-          include_once("config.php");
-          // SQL query to retrieve data from the "users" table
-          $sql = "SELECT nome, preco, descricao FROM hamburguer"
-          $result = $connection->query($sql)
-          if($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-              //echo "Nome: " . $row["nome"] . ", Descrição: " . $row["descricao"] . ", Preço: " . $row["preco"] . "<br>";
-              echo '<div class="flex flex-col items-start"><img src="../../imagens/hamburguer.png" class="min-w-[420px]"><h3 class="font-bold text-[#17BDB9] text-5xl">' . $row["nome"] . '</h3><p class="font-[Inter] font-semibold">' . $row["descricao"] . '</p><div class="mt-4 flex justify-between items-center w-full"><h3 class="font-bold">' . $row["preco"] . '</h3><ul class="flex"><a href="editar-hamburguer.php"><li class="mr-4"><img src="../../imagens/edit-icon.svg" /></li></a><a href="deletar-hamburguer.php"><li><img src="../../imagens/delete-icon.svg" /></li></a></ul></div></div>';
-            }
-          }
-          else{
-            echo "No results found";
-          }
-
-          // $sql = "SELECT id, username, email FROM users";
-          // $result = $connection->query($sql);
-
-          // if ($result->num_rows > 0) {
-          //     while ($row = $result->fetch_assoc()) {
-          //         echo "ID: " . $row["id"] . ", Username: " . $row["username"] . ", Email: " . $row["email"] . "<br>";
-          //     }
-          // } else {
-          //     echo "No results found";
-          // }
-        ?>
-        <!-- div hamburguer -->
-        <div class="flex flex-col items-start">
-            <img src="../../imagens/hamburguer.png" class="min-w-[420px]">
-            <h3 class="font-bold text-[#17BDB9] text-5xl">Hamburguer Burger</h3>
-            <p class="font-[Inter] font-semibold">Pão brioche, tomate e tristeza crônica</p>
-            <div class="mt-4 flex justify-between items-center w-full">
-               <h3 class="font-bold">R$ 49,99</h3>
-               <ul class="flex">
-                 <a hreg="editar-hamburguer.php"><li class="mr-4"><img src="../../imagens/edit-icon.svg" /></li></a>
-                 <a href="deletar-hamburguer.php"><li><img src="../../imagens/delete-icon.svg" /></li></a>
-               </ul>
+            foreach ($lista as $obj){
+            ?>
+            <div class="flex flex-col items-start">
+                <img src="../imagens/hamburguer.png" class="min-w-[420px]">
+                <h3 class="font-bold text-[#17BDB9] text-5xl"><?php echo $obj->nome ?></h3>
+                <p class="font-[Inter] font-semibold"><?php echo $obj->descricao ?></p>
+                <div class="mt-4 flex justify-between items-center w-full">
+                <h3 class="font-bold"><?php echo $obj->preco ?></h3>
+                <ul class="flex">
+                    <a hreg="editar-hamburguer.php?id=<?php echo $obj->id?>"><li class="mr-4"><img src="../imagens/edit-icon.svg" /></li></a>
+                    <a href="deletar-h.php?id=<?php echo $obj->id?>"><li><img src="../imagens/delete-icon.svg" /></li></a>
+                </ul>
+                </div>
             </div>
-        </div>
+            <?php
+            }
+        ?>
         
       </div>
-      <button class="bg-[#F9E014] text-[#8D2F0D] p-8 text-5xl mt-6 hover:underline" onclick="location.href='criar-hamburguer.html'">Adicionar Hambúrguer</button>
+      <button class="bg-[#F9E014] text-[#8D2F0D] p-8 text-5xl mt-6 hover:underline" onclick="location.href='criar-hamburguer.php'">Adicionar Hambúrguer</button>
     </section>
   </main>
   <footer>
