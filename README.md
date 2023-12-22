@@ -13,7 +13,7 @@ Bem-vindo ao Scooby Burg, a inovadora hamburgueria online com um sistema desenvo
   - [Front-End](https://github.com/GabsFerrarii/Projeto-Linux-ICS/tree/main/site-frontend)
 - Apresentações
   - [Slides]()
-  - [Gravação da aplicação]()
+  - [Gravações da aplicação](https://github.com/GabsFerrarii/Projeto-Linux-ICS/tree/main/apresenta%C3%A7%C3%B5es)
 
 ## Equipe do Projeto 📚
 | [<img src="https://avatars.githubusercontent.com/u/105514249?v=4" width=160><br><sub>Felipe Gabriel</sub>](https://github.com/lipe0777) |  [<img src="https://avatars.githubusercontent.com/u/84422577?v=4" width=160><br><sub>Gabriel Ferreira</sub>](https://github.com/GabsFerrarii) | [<img src="https://avatars.githubusercontent.com/u/93940003?v=4" width=160><br><sub>Heitor Cossito</sub>](https://github.com/cossito) | [<img src="https://avatars.githubusercontent.com/u/105497607?v=4" width=160><br><sub>Igor Jair</sub>](https://github.com/Igor-jair) | [<img src="https://avatars.githubusercontent.com/u/93940387?v=4" width=160><br><sub>Lucas de Lima</sub>](https://github.com/monzadrifteiro) | 
