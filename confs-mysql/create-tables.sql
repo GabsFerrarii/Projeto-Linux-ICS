@@ -15,7 +15,7 @@ CREATE TABLE scoobyburg.hamburguer (
 CREATE TABLE scoobyburg.bebida (
 	nome varchar(30) NOT NULL,
 	descricao varchar(100) NOT NULL,
-	id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	id int PRIMARY KEY AUTO_INCREMENT,
 	foto binary NOT NULL,
 	preco float4 NOT NULL
 );
