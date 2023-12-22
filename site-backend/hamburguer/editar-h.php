@@ -9,6 +9,7 @@ require "../../Persistencia/DAL/hamburguerDAL.php";
 
 $obj = new Hamburguer();
 
+$obj->id = $_POST["id"];
 $obj->nome = $_POST["nome"];
 $obj->preco = $_POST["preco"];
 $obj->descricao = $_POST["descricao"];
