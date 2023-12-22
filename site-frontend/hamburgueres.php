@@ -1,5 +1,5 @@
 <?php
-    include '../../Persistencia/DAL/hamburguerDAL.php';
+    include '../Persistencia/DAL/hamburguerDAL.php';
 
     $dao = new HamburguerDAL();
     $lista = $dao->listar(); 
@@ -48,7 +48,7 @@
             ?>
             <div class="flex flex-col items-center">
                 <img src="imagens/hamburguer.png" class="min-w-[420px]">
-                <h3 class="font-bold text-[#17BDB9] text-5xl"><?php echo $obj->nome ?></h3>
+                <a href="../scoobyburg.backend.biz/hamburguer/detalhes-hamburguer.php?id=<?php echo $obj->id?>"><h3 class="font-bold text-[#17BDB9] text-5xl"><?php echo $obj->nome ?></h3></a>
                 <p class="font-[Inter] font-semibold"><?php echo $obj->descricao ?></p>
                 <h3 class="font-bold"><?php echo $obj->preco ?></h3>
             </div>
