@@ -39,12 +39,12 @@
   <header class="flex justify-around items-center border-b-8 border-[#17BDB9] py-4 bg-white text-[#17BDB9]">
     <div class="w-[70rem] flex justify-between items-center">
       <h1>
-        <a href="../index.html">
+        <a href="../index.php">
           <img src="../../imagens/logo.svg">
         </a>
       </h1>
       <ol class="flex justify-between text-2xl font-bold">
-        <li class="mx-5 hover:underline"><a href="../index.html">Home</a></li>
+        <li class="mx-5 hover:underline"><a href="../index.php">Home</a></li>
         <li class="mx-5 hover:underline"><a href="#">Hambúrgueres</a></li>
         <li class="mx-5 underline text-[#8D2F0D]"><a href="../bebida/index.php">Bebidas</a></li>
         <li class="mx-5 hover:underline"><a href="../sobre-nos.html">Sobre nós</a></li>
