@@ -1,3 +1,11 @@
+<?php
+    include '../Persistencia/DAL/comboDAL.php';
+
+    $dao = new ComboDAL();
+    $lista = $dao->listar(); 
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -38,30 +46,23 @@
     <section>
       <h2>COMBOS</h2>
       <div class="flex flex-wrap justify-between w-[70rem]">
-        <div class="card">
-          <img src="imagens/combo.png" />
-          <h2 class="text-5xl mb-1">COMBO BOO</h2>
-          <p>1 Hamburguer Burguer, 1 refri e 1 batata média</p>
-          <h3>R$35,00</h3>
-        </div>
-        <div class="card">
-          <img src="imagens/combo.png" />
-          <h2 class="text-5xl mb-1">COMBO ASSUSTADOR</h2>
-          <p>1 Hamburguer Burguer, 1 refri e 1 batata média</p>
-          <h3>R$35,00</h3>
-        </div>
-        <div class="card">
-          <img src="imagens/combo.png" />
-          <h2 class="text-5xl mb-1">COMBO BIZONHO</h2>
-          <p>1 Hamburguer Burguer, 1 refri e 1 batata média</p>
-          <h3>R$35,00</h3>
-        </div>
-        <div class="card">
-          <img src="imagens/combo.png" />
-          <h2 class="text-5xl mb-1">COMBO ANORMAL</h2>
-          <p>1 Hamburguer Burguer, 1 refri e 1 batata média</p>
-          <h3>R$35,00</h3>
-        </div>
+        <?php
+            foreach ($lista as $obj){
+            ?>
+            <div class="card">
+              <img src="imagens/combo.png" />
+              <h2 class="text-5xl mb-1"><?php echo $obj->nome ?></h2>
+              <div class="flex justify-between">
+                <p>Hambúrguer ID: <?php echo $obj->hamburguer_id ?></p>
+                <p>Bebida ID: <?php echo $obj->bebida_id ?></p>
+              </div>
+              <h3>R$<?php echo $obj->preco ?></h3>
+              <a href="editar-combo.php?id=<?php echo $obj->id?>"><li class="mr-4"><img src="imagens/edit-icon.svg" /></li></a>
+              <a href="deletar-c.php?id=<?php echo $obj->id?>"><li><img src="imagens/delete-icon.svg" /></li></a>
+            </div>
+            <?php
+            }
+        ?>
       </div>
     </section>
   </main>
